@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import {JobsItem} from '../../components/'
 import {getJobsApi} from '../../services'
 
-const Jobs = () => {
+const Jobs = ({navigation}) => {
  const [jobsdata, setJobsData] = useState([]);
 
     useEffect(()=>{
@@ -23,7 +23,7 @@ const Jobs = () => {
 
 
   const renderJobs = ({item}) => (
-    <JobsItem jobItem={item} />
+    <JobsItem jobItem={item} onPress={() => navigation.navigate('Details', {jobItem: item})} />
   );
 
 
