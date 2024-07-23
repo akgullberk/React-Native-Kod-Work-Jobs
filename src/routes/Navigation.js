@@ -22,6 +22,7 @@ const Navigation = () => {
                     color: '#ef5350'
 
                 },
+                
                 headerTitleAlign: 'center',
             }} />
         </Stack.Navigator>

@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet} from 'react-native'
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         backgroundColor:"#f2f2f2",
         flex:1
@@ -42,5 +42,13 @@ export const styles = StyleSheet.create({
         fontSize: windowHeight*0.03,
         textAlign:"center",
         fontWeight:"bold",
-    }
+    },
+    contents:{
+        padding: windowHeight*0.01,
+        backgroundColor:"#ffffff",
+        borderWidth: windowWidth*0.001,
+        borderColor: "#bdbbbb",
+    },
 })
+
+export default styles

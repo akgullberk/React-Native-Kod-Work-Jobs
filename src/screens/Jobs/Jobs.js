@@ -1,24 +1,34 @@
-import {Button, FlatList, Text, View } from 'react-native'
+import {FlatList, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import {JobsItem} from '../../components/'
 import {getJobsApi} from '../../services'
+import { fromString } from 'html-to-text';
 
 const Jobs = ({navigation}) => {
  const [jobsdata, setJobsData] = useState([]);
+
+ const stripHtml = (html) => {
+  return html.replace(/<[^>]*>?/gm, '');
+}
+
 
     useEffect(()=>{
         fetchJobs();
     },[]);
 
- const fetchJobs = () =>{
-    getJobsApi()
-        .then(fetchJobs =>{
-            setJobsData(fetchJobs.results)
+    const fetchJobs = () => {
+      getJobsApi()
+        .then(fetchJobs => {
+          const cleanedJobs = fetchJobs.results.map(job => ({
+            ...job,
+            contents: stripHtml(job.contents)
+          }));
+          setJobsData(cleanedJobs);
         })
         .catch(error => {
-            console.error("hata:", error);
+          console.error("hata:", error);
         });
- };
+    };
 
 
 
