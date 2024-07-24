@@ -42,5 +42,12 @@ export const styles = StyleSheet.create({
         fontSize: windowHeight*0.03,
         textAlign:"center",
         fontWeight:"bold",
-    }
+    },
+    button_container:{
+        flexDirection:"row",
+        justifyContent:"space-evenly",
+        marginTop: windowHeight*0.01,
+        marginBottom: windowHeight*0.01
+    },
+    
 })
