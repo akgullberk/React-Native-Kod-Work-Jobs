@@ -1,6 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import {Jobs,Details} from "../screens";
+import {Jobs,Details,Favourites} from "../screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,7 +25,10 @@ const Navigation = () => {
                 
                 headerTitleAlign: 'center',
             }} />
+
+            <Stack.Screen name="Favourites" component={Favourites} />
         </Stack.Navigator>
+        
     )
 }
 
