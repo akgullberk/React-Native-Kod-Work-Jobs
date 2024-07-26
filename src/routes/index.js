@@ -1,13 +1,17 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import Navigation from './Navigation';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
 
 
 const index = () => {
   return (
-    <NavigationContainer>
-      <Navigation />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Navigation />
+      </NavigationContainer>
+    </Provider>
   );
 };
 

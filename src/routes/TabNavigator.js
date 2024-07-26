@@ -8,8 +8,8 @@ const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
     return (
       <Tab.Navigator screenOptions={{tabBarIcon: () => null,tabBarLabelStyle: {
-        fontSize: 16, // Yazı boyutu
-        marginBottom: 13, // Yazının alt boşluğu
+        fontSize: 16, 
+        marginBottom: 13, 
         color: '#ef5350'
       },}}>
         <Tab.Screen name="Jobs" component={Jobs} options={{
