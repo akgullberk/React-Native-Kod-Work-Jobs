@@ -1,8 +1,8 @@
-import {FlatList, Text, View } from 'react-native'
+import {FlatList,View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import {JobsItem} from '../../components/'
 import {getJobsApi} from '../../services'
-import { fromString } from 'html-to-text';
+
 
 const Jobs = ({navigation}) => {
  const [jobsdata, setJobsData] = useState([]);

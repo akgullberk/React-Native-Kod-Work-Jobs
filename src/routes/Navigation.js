@@ -1,21 +1,15 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import {Jobs,Details,Favourites} from "../screens";
+import {Jobs,Details} from "../screens";
+import TabNavigator from "./TabNavigator";
 
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Jobs" component={Jobs} options={{
-                headerTitleStyle: {
-                    color: '#ef5350'
-
-                },
-                headerTitleAlign: 'center',
-            }
-                
-            }/>
+            
+            <Stack.Screen name="Tabs" component={TabNavigator} options={{headerShown: false}} />
             <Stack.Screen name="Details" component={Details} options={{
                 headerTitleAlign: 'left',
                 headerTitleStyle: {
@@ -26,9 +20,8 @@ const Navigation = () => {
                 headerTitleAlign: 'center',
             }} />
 
-            <Stack.Screen name="Favourites" component={Favourites} />
+            
         </Stack.Navigator>
-        
     )
 }
 
