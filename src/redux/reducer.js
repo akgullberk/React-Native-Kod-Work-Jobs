@@ -4,9 +4,16 @@ const initialState = {
   favorites: [],
 };
 
-const favoritesReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FAVORITE:
+      const isAlreadyFavorite = state.favorites.some(job => job.id === action.payload.id);
+
+      if (isAlreadyFavorite) {
+        console.warn('Already favorite');
+        return state;
+      }
+
       return {
         ...state,
         favorites: [...state.favorites, action.payload],
@@ -21,4 +28,4 @@ const favoritesReducer = (state = initialState, action) => {
   }
 };
 
-export default favoritesReducer;
+export default reducer;

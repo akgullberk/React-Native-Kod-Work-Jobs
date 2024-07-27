@@ -39,7 +39,7 @@ const Jobs = ({navigation}) => {
 
   return (
     <View>
-      <FlatList data={jobsdata} renderItem={renderJobs} />
+      <FlatList data={jobsdata} renderItem={renderJobs} keyExtractor={item => item.id.toString()} />
     </View>
   );
 };

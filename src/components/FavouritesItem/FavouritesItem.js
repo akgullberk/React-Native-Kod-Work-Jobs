@@ -1,18 +1,33 @@
-import {Text, View } from 'react-native'
+import {Text, TouchableWithoutFeedback, View } from 'react-native'
 import React from 'react'
 import { styles } from './styles';
 
 const FavouritesItem = ({item}) => {
-
+  
 
   return (
 
-    <View style={styles.itemContainer}>
-      <Text style={styles.itemText}>{item.name}</Text>
-      <Text style={styles.itemText}>{item.company}</Text>
-      <Text style={styles.itemText}>{item.location}</Text>
-      <Text style={styles.itemText}>{item.level}</Text>
-    </View>
+    <TouchableWithoutFeedback >
+
+        <View style={styles.container}>
+            <View style={styles.body_container}>
+            <View style={styles.info}>
+                <Text style={styles.jobname}>{item.name}</Text>
+                <Text style={styles.company}>{item.company}</Text>
+
+                <View style={styles.location_container}>
+                    <Text style={styles.location}>{item.location}</Text>
+                </View>
+            </View>
+
+            <View style={styles.level_container}>
+                <Text style={styles.level}>{item.level}</Text>
+            </View>
+            </View>
+            
+
+        </View>
+    </TouchableWithoutFeedback>
   )
 }
 

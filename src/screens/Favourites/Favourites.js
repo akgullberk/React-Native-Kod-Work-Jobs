@@ -9,16 +9,19 @@ const Favourites = () => {
   const favorites = useSelector(state => state.favorites);
 
   const renderFavorite = ({ item }) => (
+    console.log("render fav", item),
     <FavouritesItem item={item} />
+    
   );
   
 
   return (
-    <View style={styles.container}>
+    <View>
       <FlatList
         data={favorites}
         renderItem={renderFavorite}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={(item, index) => `${item.id}-${index}`}
+        
       />
     </View>
   );
