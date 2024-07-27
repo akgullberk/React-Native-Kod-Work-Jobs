@@ -55,5 +55,11 @@ level:{
     color:"#f17673",
     fontWeight:"bold",
     fontSize: windowHeight*0.015,
-}
+},
+button_container: {
+    alignItems:"center",
+    marginBottom: windowHeight*0.015,
+    marginTop: windowHeight*0.01,
+},
+
 })
