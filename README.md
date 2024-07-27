@@ -1,3 +1,34 @@
+REACT NATİVE KOD WORK JOBS
+---------------
+
+# Overview
+
+A React Native application that allows users to browse job listings, view job details, and manage a list of favorite jobs.
+
+
+
+# Description
+
+
+
+This application provides a user-friendly interface for browsing job listings. Users can view detailed information about each job, save jobs to their favorites, and view a list of all their favorite jobs. The application integrates with an API to fetch job listings and uses Redux for state management.
+
+# Features
+
+- Job Listings: Browse a list of job postings fetched from an API.
+- Job Details: View detailed information about a job and visit the job's landing page.
+- Favorites: Add jobs to a favorites list and view all saved jobs.
+- State Management: Manage application state using Redux.
+- API Integration: Fetch job listings from a remote API.
+
+# Screenshots
+
+
+
+https://github.com/user-attachments/assets/df27e12c-50a8-4d70-b7a4-0cb7110b200c
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
